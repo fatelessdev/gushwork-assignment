@@ -37,7 +37,7 @@
   
   /* Layout */
   --container-max: 1240px;
-  --container-padding: 20px;
+  --container-padding: 40px;
   --header-height: 77px;
   
   /* Border radius */
@@ -153,5 +153,62 @@ input, textarea, select {
   margin: 0 auto;
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
+}
+
+/* Shared background noise layer across content sections. */
+.landing-wrapper,
+.features,
+.faq-section,
+.industries-section,
+.manufacturing,
+.testimonials,
+.portfolio,
+.resources,
+.quote-section,
+.footer-main {
+  position: relative;
+  isolation: isolate;
+}
+
+.landing-wrapper::before,
+.features::before,
+.faq-section::before,
+.industries-section::before,
+.manufacturing::before,
+.testimonials::before,
+.portfolio::before,
+.resources::before,
+.quote-section::before,
+.footer-main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../assets/images/noise.png');
+  background-repeat: repeat;
+  background-size: 280px;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.landing-wrapper > *,
+.features > *,
+.faq-section > *,
+.industries-section > *,
+.manufacturing > *,
+.testimonials > *,
+.portfolio > *,
+.resources > *,
+.quote-section > *,
+.footer-main > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Legacy section-specific noise elements replaced by shared layer above. */
+.features-bg-img,
+.faq-bg-img,
+.industries-bg {
+  display: none;
 }
 

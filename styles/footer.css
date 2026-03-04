@@ -22,9 +22,6 @@
   flex-direction: column;
   gap: 60px;
   align-items: center;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer-banner {
@@ -167,7 +164,7 @@
 }
 
 .footer-bottom {
-  padding: 12px 40px;
+  padding: 12px 0;
   background: #FFFFFF;
   border-top: 1px solid #CFD1D4;
 }

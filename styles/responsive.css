@@ -117,11 +117,11 @@
 
   /* Industries section tablet adjustments */
   .industries-container {
-    padding: 0 40px;
+    padding: 0 var(--container-padding);
   }
 
   .industries-text {
-    margin-left: 40px;
+    margin-left: 0;
     max-width: 600px;
   }
 
@@ -246,7 +246,7 @@
   }
 
   .quote-section {
-    padding: 48px var(--container-padding);
+    padding: 48px 0;
   }
 
   .quote-container {
@@ -367,7 +367,7 @@
   }
 
   .industries-container {
-    padding: 0 24px;
+    padding: 0 var(--container-padding);
   }
 
   .industries-text {
@@ -465,7 +465,7 @@
 
   /* Industries section mobile */
   .industries-container {
-    padding: 0 16px;
+    padding: 0 var(--container-padding);
   }
 
   .industries-title {

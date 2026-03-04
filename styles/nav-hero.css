@@ -239,13 +239,8 @@
   background-color: var(--color-bg); 
 }
 
-.landing-wrapper::before {
-  display: none;
-}
-
 .breadcrumb-bar {
-  padding: 12px 0;
-  border-bottom: 1px solid var(--color-border-light);
+  padding: 24px 0 12px;
 }
 
 .breadcrumb {

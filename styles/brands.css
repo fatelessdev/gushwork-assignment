@@ -1,7 +1,7 @@
 /* --- Brands Section --- */
 
 .brands-section {
-  padding: 40px 0;
+  padding: 10px 0px 80px 0px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -10,6 +10,8 @@
 .brands-container {
   width: 100%;
   max-width: 1240px;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

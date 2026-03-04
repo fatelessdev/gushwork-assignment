@@ -2,7 +2,7 @@
 
 .faq-section {
   position: relative;
-  padding: 100px 20px;
+  padding: 100px 0;
   background: white;
   border-bottom: 1px solid #E1E3E8;
   display: flex;
@@ -28,7 +28,10 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -65,7 +68,7 @@
   outline: 1px solid #E1E3E8;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0;
 }
 
 .faq-question {
@@ -99,22 +102,24 @@
   transition: transform var(--transition-base), background var(--transition-fast);
 }
 
-.faq-item:first-child .faq-chevron-wrapper {
-  background: #FFF1F2;
-}
-
-.faq-item:first-child .faq-chevron-wrapper svg path {
-  stroke: #2B3990;
-}
-
 .faq-question[aria-expanded="true"] .faq-chevron-wrapper {
+  background: #FFF1F2;
   transform: rotate(180deg);
+}
+
+.faq-question[aria-expanded="true"] .faq-chevron-wrapper svg path {
+  stroke: #2B3990;
 }
 
 .faq-answer {
   max-height: 0;
+  padding-top: 0;
   overflow: hidden;
-  transition: max-height var(--transition-slow), padding var(--transition-slow);
+  transition: max-height var(--transition-slow), padding-top var(--transition-slow);
+}
+
+.faq-question[aria-expanded="true"] + .faq-answer {
+  padding-top: 12px;
 }
 
 .faq-answer p {
@@ -125,7 +130,7 @@
   line-height: 24px;
   word-wrap: break-word;
   margin: 0;
-  padding-bottom: 18px;
+  padding: 0;
 }
 
 /* --- Catalogue CTA --- */

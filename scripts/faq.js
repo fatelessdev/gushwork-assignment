@@ -43,8 +43,8 @@ function initFAQAccordion() {
         answer.style.maxHeight = '0';
       } else {
         button.setAttribute('aria-expanded', 'true');
-        // Set max-height to scrollHeight for smooth animation
-        answer.style.maxHeight = `${answer.scrollHeight}px`;
+        // Add a small buffer to avoid sub-pixel clipping on expanded content.
+        answer.style.maxHeight = `${answer.scrollHeight + 24}px`;
       }
     });
   });

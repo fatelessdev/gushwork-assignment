@@ -2,7 +2,7 @@
 
 .features {
   position: relative;
-  padding: 100px 20px;
+  padding: 100px 0;
   background: white;
   border-bottom: 1px solid #E1E3E8;
   display: flex;
@@ -29,6 +29,9 @@
   z-index: 1;
   width: 100%;
   max-width: 1240px;
+  margin: 0 auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   display: flex;
   flex-direction: column;
   align-items: center;
