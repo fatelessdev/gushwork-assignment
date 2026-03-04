@@ -1,48 +1,16 @@
 /**
  * Testimonials Carousel Functionality
  * 
- * This module implements a testimonials slider:
- * - Dot navigation for slide selection
+ * This module enables smooth horizontal scroll navigation for testimonials:
+ * - Uses native scroll with smooth behavior
  * - Touch/swipe support for mobile devices
- * - Smooth transform-based transitions
+ * - Scrolls one card at a time on swipe
  */
 function initTestimonialsCarousel() {
-  const track = document.getElementById('testimonialsTrack');
-  const dots = document.querySelectorAll('#testimonialsDots .dot');
+  const grid = document.querySelector('.testimonials-grid');
   
-  // Exit if required elements don't exist
-  if (!track || !dots.length) return;
-
-  let currentSlide = 0;
-
-  /**
-   * Navigate to a specific slide
-   * @param {number} index - The slide index to navigate to
-   */
-  function goToSlide(index) {
-    const cards = track.querySelectorAll('.testimonial-card');
-    if (!cards.length) return;
-
-    currentSlide = index;
-
-    // Calculate scroll position based on card width and gap
-    const card = cards[0];
-    const gap = 24;
-    const scrollAmount = index * (card.offsetWidth + gap);
-    track.style.transform = `translateX(-${scrollAmount}px)`;
-
-    // Update active dot indicator
-    dots.forEach((dot, dotIndex) => {
-      dot.classList.toggle('active', dotIndex === index);
-    });
-  }
-
-  // Add click handlers to dot navigation
-  dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      goToSlide(parseInt(dot.dataset.slide, 10));
-    });
-  });
+  // Exit if the grid container doesn't exist
+  if (!grid) return;
 
   // Touch/swipe support for mobile
   let startX = 0;
@@ -51,15 +19,15 @@ function initTestimonialsCarousel() {
   /**
    * Track touch start position
    */
-  track.addEventListener('touchstart', (event) => {
+  grid.addEventListener('touchstart', (event) => {
     startX = event.touches[0].clientX;
     isDragging = true;
   }, { passive: true });
 
   /**
-   * Handle touch end - determine swipe direction and navigate
+   * Handle touch end - determine swipe direction and scroll one card
    */
-  track.addEventListener('touchend', (event) => {
+  grid.addEventListener('touchend', (event) => {
     if (!isDragging) return;
     isDragging = false;
 
@@ -68,16 +36,20 @@ function initTestimonialsCarousel() {
     const threshold = 50; // Minimum swipe distance
 
     if (Math.abs(diff) <= threshold) return;
-    
-    // Swipe left - go to next slide
-    if (diff > 0 && currentSlide < dots.length - 1) {
-      goToSlide(currentSlide + 1);
+
+    const card = grid.querySelector('.testimonial-card');
+    if (!card) return;
+    const scrollAmount = card.offsetWidth + 24; // card width + gap
+
+    // Swipe left - scroll right
+    if (diff > 0) {
+      grid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       return;
     }
 
-    // Swipe right - go to previous slide
-    if (diff < 0 && currentSlide > 0) {
-      goToSlide(currentSlide - 1);
+    // Swipe right - scroll left
+    if (diff < 0) {
+      grid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
   }, { passive: true });
 }
