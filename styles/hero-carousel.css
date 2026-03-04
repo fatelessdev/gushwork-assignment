@@ -14,12 +14,12 @@
 
 .carousel-zoom-container {
   position: relative;
-  border-radius: var(--border-radius-lg);
+  border-radius: 16px;
   overflow: hidden;
-  background: var(--color-bg-light);
+  background: transparent;
   cursor: crosshair;
   flex: 1;
-  aspect-ratio: 4 / 3;
+  min-height: 480px;
 }
 
 .carousel-main-img {
@@ -33,9 +33,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.9);
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
   border: none;
   border-radius: 50%;
   display: flex;
@@ -44,36 +44,36 @@
   cursor: pointer;
   z-index: 5;
   padding: 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-  transition: background var(--transition-fast);
+  box-shadow: none;
+  transition: opacity var(--transition-fast);
 }
 
-.hero-carousel-arrow img {
+.hero-carousel-arrow svg {
   width: 20px;
   height: 20px;
   display: block;
 }
 
 .hero-carousel-arrow:hover {
-  background: #fff;
+  opacity: 0.9;
 }
 
 .hero-prev {
-  left: 16px;
+  left: 40px;
 }
 
 .hero-next {
-  right: 16px;
+  right: 40px;
 }
 
 /* Zoom preview panel */
 .zoom-preview {
   position: absolute;
   top: 0;
-  left: calc(100% + 12px);
-  width: 300px;
-  height: 300px;
-  border: 2px solid var(--color-border);
+  left: calc(100% + 16px);
+  width: 320px;
+  height: 320px;
+  border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   background: var(--color-bg);
@@ -89,10 +89,13 @@
 }
 
 .zoom-preview img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 200%;
   height: 200%;
   object-fit: cover;
-  transform-origin: center center;
+  transition: transform 0.05s linear;
 }
 
 /* Carousel lens indicator overlay */
@@ -100,16 +103,13 @@
   position: absolute;
   width: 120px;
   height: 120px;
-  border: 2px solid rgba(43, 57, 144, 0.4);
-  background: rgba(43, 57, 144, 0.08);
+  border: 2px solid rgba(43, 57, 144, 0.6);
+  background: rgba(43, 57, 144, 0.1);
   border-radius: 4px;
   pointer-events: none;
   opacity: 0;
   transition: opacity var(--transition-fast);
-}
-
-.carousel-zoom-container:hover .zoom-lens {
-  opacity: 1;
+  z-index: 5;
 }
 
 /* Thumbnails */
@@ -154,6 +154,8 @@
 /* --- Product Info --- */
 .hero-info {
   padding-top: 8px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-certs {
@@ -166,14 +168,20 @@
 .cert-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   padding: 6px 12px;
   font-size: 13px;
-  font-weight: 500;
-  color: var(--color-text);
+  font-weight: 400;
+  color: #000000;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: 6px;
+}
+
+.cert-badge img {
+  width: 24px;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .hero-title {
@@ -181,7 +189,7 @@
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-text);
+  color: #000000;
   margin-bottom: 20px;
 }
 
@@ -197,7 +205,7 @@
   align-items: center;
   gap: 10px;
   font-size: 14px;
-  color: var(--color-text);
+  color: #000000;
 }
 
 .icon-check {
@@ -206,8 +214,8 @@
 
 .hero-price-box {
   margin-bottom: 24px;
-  padding: 20px;
-  background: var(--color-bg-light);
+  padding: 16px 20px;
+  background: #ffffff;
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius-lg);
 }
@@ -216,7 +224,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .price-label {
@@ -229,7 +237,7 @@
 .price-value {
   font-size: 28px;
   font-weight: 700;
-  color: var(--color-text);
+  color: #000000;
 }
 
 .hero-badges {
@@ -255,7 +263,8 @@
 
 .badge-gray {
   background: var(--color-bg-light);
-  color: var(--color-text-muted);
+  color: #000000;
+  font-weight: 600;
   border: 1px solid var(--color-border);
 }
 

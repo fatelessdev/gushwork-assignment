@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding and viewport settings -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Mangalam HDPE Pipes - Premium HDPE Pipes & Coils for Modern Infrastructure. Manufacturer in South India.">
   <title>Mangalam HDPE Pipes - Premium HDPE Pipes &amp; Coils for Modern Infrastructure</title>
+  
+  <!-- Google Fonts - Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets - Loaded in order of priority -->
+  <!-- Base styles and CSS variables -->
   <link rel="stylesheet" href="styles/base.css">
+  <!-- Navigation and hero section -->
   <link rel="stylesheet" href="styles/nav-hero.css">
   <link rel="stylesheet" href="styles/hero-carousel.css">
+  <!-- Content sections -->
   <link rel="stylesheet" href="styles/brands.css">
   <link rel="stylesheet" href="styles/specifications.css">
   <link rel="stylesheet" href="styles/features.css">
@@ -22,14 +30,21 @@
   <link rel="stylesheet" href="styles/resources.css">
   <link rel="stylesheet" href="styles/quote.css">
   <link rel="stylesheet" href="styles/footer.css">
+  <!-- Responsive styles - loaded last to override defaults -->
   <link rel="stylesheet" href="styles/responsive.css">
 </head>
 <body>
 
-  <!-- Skip to main content (accessibility) -->
+  <!-- Skip to main content link for keyboard navigation (accessibility) -->
   <a href="#main" class="skip-link">Skip to main content</a>
 
-    <header class="site-header" id="siteHeader">
+  <!-- ========================================
+       SITE HEADER (Primary Navigation)
+       - Logo and main navigation links
+       - Contact Us CTA button
+       - Mobile hamburger menu
+       ======================================== -->
+  <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="Mangalam HDPE Pipes Home">
         <img src="assets/images/logo.png" alt="Mangalam HDPE Pipes" class="logo-img">
@@ -56,7 +71,13 @@
     </div>
   </header>
 
-    <header class="sticky-header" id="stickyHeader" aria-hidden="true">
+  <!-- ========================================
+       STICKY HEADER
+       - Appears when scrolling past the hero section
+       - Hides when scrolling back up
+       - Provides persistent navigation access
+       ======================================== -->
+  <header class="sticky-header" id="stickyHeader" aria-hidden="true">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="Mangalam HDPE Pipes Home">
         <img src="assets/images/logo.png" alt="Mangalam HDPE Pipes" class="logo-img">
@@ -83,7 +104,8 @@
     </div>
   </header>
 
-    <div class="mobile-nav-overlay" id="mobileNavOverlay">
+  <!-- Mobile Navigation Overlay (shown when hamburger is clicked) -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay">
     <nav class="mobile-nav" aria-label="Mobile navigation">
       <ul class="mobile-nav-links">
         <li><a href="#">About Us</a></li>
@@ -94,10 +116,16 @@
     </nav>
   </div>
 
+  <!-- ========================================
+       MAIN CONTENT
+       ======================================== -->
   <main id="main">
 
+    <!-- Landing wrapper with noise texture background -->
     <div class="landing-wrapper">
-        <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb-bar" aria-label="Breadcrumb">
       <div class="container">
         <ol class="breadcrumb">
           <li><a href="#">Products</a></li>
@@ -106,12 +134,19 @@
       </div>
     </nav>
 
-        <section class="hero" id="hero">
+      <!-- ========================================
+           HERO SECTION
+           - Product image carousel with zoom preview
+           - Product information and pricing
+           - CTA buttons
+           ======================================== -->
+      <section class="hero" id="hero">
       <div class="container hero-grid">
 
-        <!-- Image Carousel -->
+        <!-- Image Carousel with Zoom Functionality -->
         <div class="hero-carousel">
           <div class="carousel-main" id="carouselMain">
+            <!-- Main image container - zoom lens appears on hover -->
             <div class="carousel-zoom-container" id="zoomContainer">
               <img
                 src="assets/images/fishnet-landing.png"
@@ -119,19 +154,20 @@
                 class="carousel-main-img"
                 id="mainImage"
               >
-              <!-- Carousel Arrows -->
+              <!-- Carousel Navigation Arrows -->
               <button class="hero-carousel-arrow hero-prev" aria-label="Previous image">
-                <img src="assets/images/left-arrow.png" alt="Previous">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
               </button>
               <button class="hero-carousel-arrow hero-next" aria-label="Next image">
-                <img src="assets/images/right-arrow.png" alt="Next">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
-            <!-- Zoom preview panel (appears on hover) -->
+            <!-- Zoom preview panel - shows magnified view on hover -->
             <div class="zoom-preview" id="zoomPreview">
               <img src="" alt="Zoomed view" id="zoomPreviewImg">
             </div>
           </div>
+          <!-- Thumbnail Navigation -->
           <div class="carousel-thumbs" id="carouselThumbs">
             <button class="thumb active" data-index="0" aria-label="View image 1">
               <div class="empty-thumb"></div>
@@ -154,20 +190,20 @@
           </div>
         </div>
 
-        <!-- Product Info -->
+        <!-- Product Information Column -->
         <div class="hero-info">
           <!-- Certification badges -->
           <div class="hero-certs">
             <span class="cert-badge">
-              <img src="assets/images/bis.png" alt="BIS" width="20">
+              <img src="assets/images/bis.png" alt="BIS" width="24">
               BIS Certified
             </span>
             <span class="cert-badge">
-              <img src="assets/images/iso.png" alt="ISO" width="20">
+              <img src="assets/images/iso.png" alt="ISO" width="24">
               ISO Certified
             </span>
             <span class="cert-badge">
-              <img src="assets/images/ce-certification.png" alt="CE" width="20">
+              <img src="assets/images/ce-certification.png" alt="CE" width="24">
               CE Certified
             </span>
           </div>
@@ -207,13 +243,14 @@
           </div>
           <div class="hero-actions">
             <a href="#quote-form" class="btn btn-primary">Get Custom Quote</a>
-            <a href="#specifications" class="btn btn-outline">View Technical Specs</a>
+            <a href="#specifications" class="btn btn-outline-dark">View Technical Specs <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </div>
     </section>
 
-        <section class="brands-section" aria-label="Trusted brands">
+      <!-- Trusted Brands Section -->
+      <section class="brands-section" aria-label="Trusted brands">
       <div class="brands-container">
         <div class="brands-title">Trusted by Hundreds of Companies Globally</div>
         <div class="brands-logos">
@@ -228,7 +265,12 @@
     </section>
   </div>
 
-        <section class="specifications" id="specifications">
+      <!-- ========================================
+           TECHNICAL SPECIFICATIONS SECTION
+           - Displays product specs in table format
+           - Download datasheet CTA
+           ======================================== -->
+      <section class="specifications" id="specifications">
       <div class="spec-container">
         <div class="spec-header">
           <h2 class="spec-title"><span>Technical Specifications</span><span> at a Glance</span></h2>
@@ -261,7 +303,7 @@
             <div class="spec-row spec-value">Butt Fusion, Electrofusion, Mechanical</div>
             <div class="spec-row spec-value">Up to 500mm (for smaller diameters)</div>
             <div class="spec-row spec-value spec-country">
-              <span>&#127470;&#127475;</span>
+              <span>🇮🇳</span>
               <span>India</span>
             </div>
           </div>
@@ -276,7 +318,12 @@
       </div>
     </section>
 
-        <section class="features" id="features">
+      <!-- ========================================
+           FEATURES SECTION
+           - Key product benefits in card grid
+           - Background with noise texture
+           ======================================== -->
+      <section class="features" id="features">
       <img src="assets/images/noise.png" alt="" class="features-bg-img" aria-hidden="true" />
       <div class="features-container">
         <div class="features-header">
@@ -349,7 +396,12 @@
       </div>
     </section>
 
-        <section class="faq-section" id="faq">
+      <!-- ========================================
+           FAQ SECTION
+           - Accordion-style FAQ items
+           - Email catalogue subscription form
+           ======================================== -->
+      <section class="faq-section" id="faq">
       <img src="assets/images/noise.png" alt="" class="faq-bg-img" aria-hidden="true" />
       <div class="faq-container">
         <h2 class="faq-title">
@@ -435,7 +487,12 @@
       </div>
     </section>
 
-        <section class="industries-section" id="industries">
+      <!-- ========================================
+           INDUSTRIES SECTION
+           - Horizontal scrolling carousel
+           - Shows different industry applications
+           ======================================== -->
+      <section class="industries-section" id="industries">
       <img class="industries-bg" src="assets/images/noise.png" alt="" />
       <div class="industries-container">
         <div class="industries-header-row">
@@ -445,10 +502,14 @@
           </div>
           <div class="industries-nav">
             <button class="ind-arrow" id="indPrev" aria-label="Previous industry">
-              <img src="assets/images/left-arrow.png" alt="Previous">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </button>
             <button class="ind-arrow" id="indNext" aria-label="Next industry">
-              <img src="assets/images/right-arrow.png" alt="Next">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </button>
           </div>
         </div>
@@ -499,34 +560,17 @@
                 <p class="industry-card-desc">High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
               </div>
             </div>
-            <!-- Card 5 -->
-            <div class="industry-card">
-              <div class="industry-img-box">
-                <img src="assets/images/fishnet.png" alt="Fishnet Manufacturing" loading="lazy">
-              </div>
-              <div class="industry-overlay-grad"></div>
-              <div class="industry-content">
-                <h3 class="industry-card-title">Fishnet Manufacturing</h3>
-                <p class="industry-card-desc">High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
-              </div>
-            </div>
-            <!-- Card 6 -->
-            <div class="industry-card">
-              <div class="industry-img-box">
-                <img src="assets/images/fishnet.png" alt="Fishnet Manufacturing" loading="lazy">
-              </div>
-              <div class="industry-overlay-grad"></div>
-              <div class="industry-content">
-                <h3 class="industry-card-title">Fishnet Manufacturing</h3>
-                <p class="industry-card-desc">High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
 
-        <section class="manufacturing" id="manufacturing">
+      <!-- ========================================
+           MANUFACTURING PROCESS SECTION
+           - Tabbed interface showing process steps
+           - Each step with image and description
+           ======================================== -->
+      <section class="manufacturing" id="manufacturing">
       <div class="container manufacturing-inner">
         <div class="manufacturing-header">
           <h2 class="manufacturing-title">Advanced HDPE Pipe Manufacturing Process</h2>
@@ -570,10 +614,10 @@
                 <img src="assets/images/fishnet-material.png" alt="Raw material selection process" loading="lazy">
                 <div class="mfg-img-arrows">
                   <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </button>
                   <button class="mfg-arrow mfg-arrow-next" aria-label="Next image">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                   </button>
                 </div>
               </div>
@@ -599,8 +643,8 @@
               <div class="mfg-panel-image">
                 <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=500&h=340&fit=crop" alt="Extrusion process" loading="lazy">
                 <div class="mfg-img-arrows">
-                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 </div>
               </div>
             </div>
@@ -625,8 +669,8 @@
               <div class="mfg-panel-image">
                 <img src="https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=500&h=340&fit=crop" alt="Cooling system" loading="lazy">
                 <div class="mfg-img-arrows">
-                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 </div>
               </div>
             </div>
@@ -651,8 +695,8 @@
               <div class="mfg-panel-image">
                 <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=500&h=340&fit=crop" alt="Sizing process" loading="lazy">
                 <div class="mfg-img-arrows">
-                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 </div>
               </div>
             </div>
@@ -677,8 +721,8 @@
               <div class="mfg-panel-image">
                 <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=340&fit=crop" alt="Quality control" loading="lazy">
                 <div class="mfg-img-arrows">
-                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 </div>
               </div>
             </div>
@@ -703,8 +747,8 @@
               <div class="mfg-panel-image">
                 <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&h=340&fit=crop" alt="Marking process" loading="lazy">
                 <div class="mfg-img-arrows">
-                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 </div>
               </div>
             </div>
@@ -729,8 +773,8 @@
               <div class="mfg-panel-image">
                 <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=500&h=340&fit=crop" alt="Cutting process" loading="lazy">
                 <div class="mfg-img-arrows">
-                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 </div>
               </div>
             </div>
@@ -755,8 +799,8 @@
               <div class="mfg-panel-image">
                 <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&h=340&fit=crop" alt="Packaging and dispatch" loading="lazy">
                 <div class="mfg-img-arrows">
-                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                  <button class="mfg-arrow mfg-arrow-next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                 </div>
               </div>
             </div>
@@ -766,7 +810,12 @@
       </div><!-- /.manufacturing-inner -->
     </section>
 
-        <section class="testimonials" id="testimonials">
+      <!-- ========================================
+           TESTIMONIALS SECTION
+           - Customer testimonial cards
+           - Grid layout with company logos
+           ======================================== -->
+      <section class="testimonials" id="testimonials">
       <div class="container testimonials-inner">
         <div class="testimonials-header">
           <h2 class="testimonials-title">Trusted Performance. Proven Results</h2>
@@ -896,7 +945,12 @@
       </div>
     </section>
 
-        <section class="portfolio" id="portfolio">
+      <!-- ========================================
+           PORTFOLIO / RELATED PRODUCTS SECTION
+           - Product category cards
+           - Expert consultation CTA
+           ======================================== -->
+      <section class="portfolio" id="portfolio">
       <div class="container portfolio-inner">
         <div class="portfolio-header">
           <h2 class="portfolio-title">Complete Piping Solutions Portfolio</h2>
@@ -906,7 +960,7 @@
         <div class="portfolio-grid">
           <div class="portfolio-card">
             <div class="portfolio-card-top">
-              <h3>HDPE Fittings &amp; Accessories</h3>
+              <h3 style="white-space: nowrap;">HDPE Fittings &amp; Accessories</h3>
               <p>Complete range of electrofusion and butt fusion fittings, including elbows, tees, reducers, and couplers for seamless pipe connections.</p>
             </div>
             <div class="portfolio-card-bottom">
@@ -955,7 +1009,12 @@
       </div>
     </section>
 
-        <section class="resources" id="resources">
+      <!-- ========================================
+           RESOURCES & DOWNLOADS SECTION
+           - Downloadable PDF documents
+           - Technical documentation links
+           ======================================== -->
+      <section class="resources" id="resources">
       <div class="container resources-inner">
         <div class="resources-header">
           <h2 class="resources-title">Resources &amp; Downloads</h2>
@@ -988,7 +1047,12 @@
       </div>
     </section>
 
-        <section class="quote-section" id="quote-form">
+      <!-- ========================================
+           CONTACT / QUOTE FORM SECTION
+           - Contact information
+           - Lead capture form
+           ======================================== -->
+      <section class="quote-section" id="quote-form">
       <div class="quote-container">
         <div class="quote-content-wrapper">
           <div class="quote-text-col">
@@ -1031,13 +1095,21 @@
 
   </main>
 
-    <footer class="site-footer">
+  <!-- ========================================
+       SITE FOOTER
+       - Company information and branding
+       - Navigation links by category
+       - Contact information
+       - Social media links
+       - Legal links and copyright
+       ======================================== -->
+  <footer class="site-footer">
     <div class="footer-main">
       <div class="container footer-main-inner">
         
         <!-- Premium Manufacturer Banner -->
         <div class="footer-banner">
-          <img src="https://placehold.co/109x40" alt="Meera Industries Logo" class="footer-logo-img">
+          <img src="assets/images/logo.png" alt="Mangalam Logo" class="footer-logo-img">
           <h2 class="footer-banner-text">
             <span>Premium </span>
             <span class="highlight">HDPE Pipes &amp; Fittings Manufacturer</span>
@@ -1132,14 +1204,28 @@
     </div>
   </footer>
 
+  <!-- ========================================
+       JAVASCRIPT FILES
+       - Loaded at end of body for performance
+       - Each script handles specific functionality
+       ======================================== -->
+  <!-- Sticky header behavior -->
   <script src="scripts/sticky-header.js"></script>
+  <!-- Hero image carousel -->
   <script src="scripts/hero-carousel.js"></script>
+  <!-- Image zoom functionality -->
   <script src="scripts/image-zoom.js"></script>
+  <!-- FAQ accordion -->
   <script src="scripts/faq.js"></script>
+  <!-- Manufacturing process tabs -->
   <script src="scripts/manufacturing-tabs.js"></script>
+  <!-- Testimonials slider -->
   <script src="scripts/testimonials-carousel.js"></script>
+  <!-- Industries carousel -->
   <script src="scripts/industries-carousel.js"></script>
+  <!-- Mobile navigation -->
   <script src="scripts/mobile-nav.js"></script>
+  <!-- Main initialization script -->
   <script src="scripts/main.js"></script>
 </body>
 </html>

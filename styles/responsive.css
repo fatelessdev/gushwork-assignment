@@ -115,6 +115,29 @@
     max-width: 100%;
   }
 
+  /* Industries section tablet adjustments */
+  .industries-container {
+    padding: 0 40px;
+  }
+
+  .industries-text {
+    margin-left: 40px;
+    max-width: 600px;
+  }
+
+  .industries-title {
+    font-size: 36px;
+  }
+
+  .industry-card {
+    height: 380px;
+  }
+
+  .industries-track {
+    overflow-x: auto;
+  }
+  }
+
   /* Hide zoom preview on tablet (touch devices) */
   .zoom-preview {
     display: none;
@@ -334,14 +357,23 @@
   }
 
   .industry-card {
-    flex: 0 0 300px;
-    width: 300px;
+    flex: 0 0 280px;
+    width: 280px;
     height: 340px;
   }
 
   .industries-section {
-    padding: 60px 16px;
+    padding: 60px 0;
     gap: 32px;
+  }
+
+  .industries-container {
+    padding: 0 24px;
+  }
+
+  .industries-text {
+    margin-left: 0;
+    max-width: 100%;
   }
 
   .industries-header-row {
@@ -351,6 +383,18 @@
 
   .industries-nav {
     align-self: flex-end;
+  }
+
+  .industries-track {
+    overflow-x: auto;
+  }
+
+  .industry-card:first-child {
+    border-radius: 24px;
+  }
+
+  .industry-card:last-child {
+    border-radius: 24px;
   }
 
   .faq-catalogue {
@@ -418,6 +462,44 @@
 
   .mfg-panel-image img {
     height: 220px;
+  }
+
+  /* Industries section mobile */
+  .industries-container {
+    padding: 0 16px;
+  }
+
+  .industries-title {
+    font-size: 26px;
+  }
+
+  .industries-subtitle {
+    font-size: 16px;
+  }
+
+  .ind-arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .ind-arrow svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .industry-card {
+    flex: 0 0 260px;
+    width: 260px;
+    height: 300px;
+    padding: 20px 16px;
+  }
+
+  .industry-card-title {
+    font-size: 18px;
+  }
+
+  .industry-card-desc {
+    font-size: 13px;
   }
 
 }

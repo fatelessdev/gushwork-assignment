@@ -1,40 +1,62 @@
+/**
+ * Base Stylesheet
+ * 
+ * This file contains CSS custom properties (variables), reset styles,
+ * and base utility classes used throughout the website.
+ */
 
-/* --- CSS Custom Properties --- */
+/* --- CSS Custom Properties (Design Tokens) --- */
 :root {
+  /* Primary brand colors */
   --color-primary: #2B3990;
   --color-primary-dark: #1e2a6e;
   --color-primary-light: #3d4bab;
+  
+  /* Text colors */
   --color-text: #262a2e;
   --color-text-muted: #6a7077;
   --color-text-light: #9ca3af;
   --color-text-secondary: #535a61;
+  
+  /* Background colors */
   --color-bg: #ffffff;
   --color-bg-light: #f5f7fa;
   --color-bg-dark: #1b1c1d;
+  
+  /* Border colors */
   --color-border: #e5e7eb;
   --color-border-light: #f0f0f0;
+  
+  /* Utility colors */
   --color-success: #10b981;
   --color-white: #ffffff;
 
+  /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-heading: 'Urbanist', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Layout */
   --container-max: 1240px;
   --container-padding: 20px;
   --header-height: 77px;
+  
+  /* Border radius */
   --border-radius: 8px;
   --border-radius-lg: 12px;
   --border-radius-xl: 16px;
 
+  /* Shadows */
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
   --shadow-s2: 0 2px 4px rgba(27,28,29,0.04);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
   --shadow-lg: 0 16px 32px -12px rgba(0,0,0,0.12);
 
+  /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
 
-  /* Legacy Figma token aliases kept for compatibility with imported snippets. */
+  /* Legacy Figma token aliases for compatibility */
   --Colors-Neutral-50: #F1F2F3;
   --Colors-Neutral-200: #CFD1D4;
   --Colors-Neutral-500: #878B94;
@@ -43,7 +65,8 @@
   --Colors-Secondary-500-main: #111827;
 }
 
-/* --- Reset & Base --- */
+/* --- Reset & Base Styles --- */
+/* Reset all elements to consistent baseline */
 *,
 *::before,
 *::after {
@@ -52,11 +75,13 @@
   padding: 0;
 }
 
+/* Smooth scroll for anchor links */
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
+/* Body typography and appearance */
 body {
   font-family: var(--font-family);
   font-size: 16px;
@@ -67,12 +92,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Responsive images */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Link styling */
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -83,10 +110,12 @@ a:hover {
   color: var(--color-primary-dark);
 }
 
+/* Reset lists */
 ul, ol {
   list-style: none;
 }
 
+/* Reset buttons */
 button {
   font-family: inherit;
   cursor: pointer;
@@ -94,12 +123,13 @@ button {
   background: none;
 }
 
+/* Reset form elements */
 input, textarea, select {
   font-family: inherit;
   font-size: inherit;
 }
 
-/* --- Accessibility --- */
+/* --- Accessibility Utilities --- */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -116,7 +146,8 @@ input, textarea, select {
   top: 16px;
 }
 
-/* --- Utility: Container --- */
+/* --- Layout Utilities --- */
+/* Centered container with max width */
 .container {
   max-width: var(--container-max);
   margin: 0 auto;

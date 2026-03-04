@@ -24,6 +24,9 @@
   max-width: 800px;
   align-self: flex-start;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .spec-header .spec-title {
@@ -108,7 +111,13 @@
   gap: 8px;
 }
 
+.spec-country span:first-child {
+  font-size: 20px;
+  line-height: 1;
+}
+
 .spec-download-btn {
+  margin-top: 24px;
   height: 52px;
   padding: 16px 20px;
   border-radius: 12px;
